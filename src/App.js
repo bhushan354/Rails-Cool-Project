@@ -1,12 +1,14 @@
 import React from 'react';
 import { Switch, Route, Link } from 'react-router-dom';
 import { Layout, Typography, Space } from 'antd';
+//these components we can import in single line which are exported from './components/index.js' file
+import { Navbar } from './components';
 
 const App = () => {
     return (
         <div className='app'>
             <div className='navbar'>
-
+              <Navbar />
             </div>
             <div className='main'>
 
