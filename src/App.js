@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-    BrowserRouter as Router,
-    Routes,
-    Route,
-    Link,
-} from "react-router-dom";
+import { Routes, Route, Link } from 'react-router-dom';
 import { Layout, Typography, Space } from 'antd';
 //these components we can import in single line which are exported from './components/index.js' file
 import { Exchanges, Homepage, News, Cryptocurrencies, CryptoDetails, Navbar } from './components';
@@ -17,19 +12,22 @@ const App = () => {
             </div>
             <div className='main'>
                 <Layout>
-                    <div className='routes'>
+                    <div className="routes">
                         <Routes>
-                            <Route exact path="/" element={<Homepage />} />
-                            <Route exact path="/exchanges" element={<Exchanges />} />
-                            <Route exact path="/cryptocurrencies" element={<Cryptocurrencies />} />
-                            <Route exact path="/crypto/:coinId" element={<CryptoDetails />} />
-                            <Route exact path="/news" element={<News />} />
+                            <Route path="/" element={<Homepage />} />
+                            <Route path="/exchanges" element={<Exchanges />} />
+                            <Route path="/cryptocurrencies" element={<Cryptocurrencies />} />
+                            <Route path="/crypto/:coinId" element={<CryptoDetails />} />
+                            <Route path="/news" element={<News />} />
                         </Routes>
                     </div>
                 </Layout>
             </div>
             <div className='footer'>
-
+                <Typography.Title>
+                    Cryptoverser<br />
+                    All rights reserved
+                </Typography.Title>
             </div>
         </div>
     );
