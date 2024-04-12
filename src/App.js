@@ -1,8 +1,9 @@
 import React from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import { Layout, Typography, Space } from 'antd';
-//these components we can import in single line which are exported from './components/index.js' file
 import { Exchanges, Homepage, News, Cryptocurrencies, CryptoDetails, Navbar } from './components';
+
+import './App.css';
 
 const App = () => {
     return (
@@ -22,15 +23,20 @@ const App = () => {
                         </Routes>
                     </div>
                 </Layout>
-            </div>
-            <div className='footer'>
-                <Typography.Title>
-                    Cryptoverser<br />
-                    All rights reserved
-                </Typography.Title>
+                <div className='footer'>
+                    <Typography.Title>
+                        Cryptoverser<br />
+                        All rights reserved
+                    </Typography.Title>
+                    <Space>
+                        <Link to="/">Home</Link>
+                        <Link to="/exchanges">Exchanges</Link>
+                        <Link to="/news">News</Link>
+                    </Space>
+                </div>
             </div>
         </div>
     );
 }
 
-export default App
+export default App;
